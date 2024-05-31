@@ -1,95 +1,181 @@
 body {
   font-family: "Raleway", sans-serif;
 }
+/* Importar la fuente Roboto de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
+    padding: 0.8rem 1rem; /* Espaciado interno */
+    font-family: 'Roboto', sans-serif; /* Cambiar la fuente a Roboto */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Tamaño del texto del logo */
+    font-weight: bold; /* Grosor del texto */
+    color: #333; /* Color del texto */
+    transition: color 0.3s; /* Transición suave del color */
+}
+
+.navbar-toggler {
+    border: none; /* Elimina el borde del botón del toggler */
+}
+
+.navbar-toggler-icon {
+    background-color: #333; /* Color del icono */
+    border-radius: 2px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Elimina el contorno al enfocar el botón del toggler */
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-color: #007bff; /* Color del icono al pasar el ratón */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem; /* Tamaño del texto de los enlaces */
+    margin-left: 15px; /* Espaciado entre los enlaces */
+    color: #333; /* Color del texto */
+    transition: color 0.3s, transform 0.3s; /* Transición suave del color y el movimiento */
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 8px; /* Espaciado entre el icono y el texto */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Color del texto al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de movimiento al pasar el ratón */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #007bff; /* Color del texto del enlace activo */
+    font-weight: bold; /* Enlace activo en negrita */
+}
+
 
 /* Hero Section */
-
 #Hero-Section {
   background-image: url("../img/portada.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4); /* Añadir sombra oscura */
+  color: white;
 }
 
-/* Mis trabajos */
+/* Estilo para las tarjetas de proyectos */
 
 .card.bg-image {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  position: relative;
-  height: 300px; /* Ajusta la altura según sea necesario */
-  display: flex;
-  align-items: flex-end; /* Alinea el contenido al fondo del contenedor */
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ced4da; /* Agregar borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+}
+
+.card.bg-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-body {
-  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para mejorar la legibilidad del texto */
+  background: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 10px;
 }
 
-.btn-outline-light {
-  border-color: white;
-  color: white;
+.card-title,
+.card-text {
+  color: white; /* Texto en blanco para mayor contraste */
+  text-align: center; /* Alinear el texto al centro */
 }
 
-.btn-outline-light:hover {
-  background-color: white;
-  color: black;
+.card-title {
+  font-size: 1.5rem; /* Tamaño de fuente más grande para el título */
+  font-weight: bold; /* Hacer el título en negrita */
 }
+
+.card-text {
+  font-size: 1rem; /* Tamaño de fuente más grande para el texto */
+}
+
+/* Efecto de desplazamiento al pasar el cursor */
+.card.bg-image:hover .card-body {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 
 /* Contacto */
+/* Estilos para la sección de contacto */
+
 #Contacto {
-  background-color: #f8f9fa; /* Fondo claro para la sección */
-  padding: 2rem;
+  background-color: #f8f9fa;
+  padding: 50px;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(3, 3, 3, 0.1);
 }
 
 #Contacto h2 {
-  color: #17a2b8; /* Color azul del texto */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #343a40;
 }
 
-#Contacto .form-group label {
-  font-weight: bold;
+#Contacto p {
+  font-size: 1.2rem;
+  color: #0a0a0a;
+}
+
+#Contacto form {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 #Contacto .form-control {
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-#Contacto .btn-info {
-  background-color: #17a2b8;
-  border: none;
+#Contacto .btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 15px 30px;
 }
 
-#Contacto .btn-info:hover {
-  background-color: #138496;
+#Contacto .btn:hover {
+  background-color: #292f33;
+  color: #fff;
 }
+
+
+/* Footer */
 footer {
-  background-color: #343a40; /* Fondo oscuro */
-  color: #ffffff; /* Texto claro */
-  padding: 1rem; /* Espaciado interno */
-  text-align: center; /* Alineación del texto al centro */
-  font-size: 0.9rem; /* Tamaño de fuente */
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 footer p {
-  margin: 0; /* Sin márgenes para el párrafo */
+  margin: 0;
 }
-
 
 @media (max-width: 768px) {
   #Contacto form label {
-    font-weight: 400;
+      font-weight: 400;
   }
 
-  .navbar-brand{
-    width: 100px;
+  .navbar-brand {
+      width: 100px;
   }
-
 }
+

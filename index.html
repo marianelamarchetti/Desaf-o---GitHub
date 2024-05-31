@@ -18,30 +18,29 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <a class="navbar-brand" href="#">Mi Sitio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#Acerca-de-mi">Acerca de mi</a>
+                        <a class="nav-link" href="#Acerca-de-mi"><i class="fas fa-user"></i> Acerca de mí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Mis-proyectos">Proyectos</a>
+                        <a class="nav-link" href="#Mis-proyectos"><i class="fas fa-project-diagram"></i> Mis proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Contacto">Contacto</a>
+                        <a class="nav-link" href="#Contacto"><i class="fas fa-envelope"></i> Contacto</a>
                     </li>
-
                 </ul>
-
             </div>
         </div>
     </nav>
-
+    
     <header id="Hero-Section" class="text-light text-end py-5 mt-5">
         <div class="container">
             <div class="ms-auto col-12 col-md-7 ">
@@ -55,18 +54,11 @@
         </div>
     </header>
 
-
     <section id="Acerca-de-mi" class="container text-center my-5">
-
-
         <h2 class="display-3 fw-bold my-4">Acerca de mi</h2>
-
         <p class="my-4">
-            <p class="my-4">
-                Soy estudiante de Desarrollo de Software, apasionada por la tecnología. Mi formación académica me ha proporcionado una sólida base en programación, desarrollo web y bases de datos. Estoy constantemente explorando nuevas tecnologías y enfoques para mejorar mis habilidades y enfrentar los desafíos del mundo del desarrollo de software. Mi objetivo es convertirme en una profesional altamente calificada.
-            </p>
+            Soy estudiante de Desarrollo de Software, apasionada por la tecnología. Mi formación académica me ha proporcionado una sólida base en programación, desarrollo web y bases de datos. Estoy constantemente explorando nuevas tecnologías y enfoques para mejorar mis habilidades y enfrentar los desafíos del mundo del desarrollo de software. Mi objetivo es convertirme en una profesional altamente calificada.
         </p>
-
 
         <div class="row">
             <div class="col-12 col-md-4">
@@ -91,16 +83,13 @@
                 </p>
             </div>
         </div>
-        
     </section>
 
-    <section id="Mis-trabajos" class="my-5 p-5 bg-info">
-
+    <section id="Mis-proyectos" class="my-5 p-5 bg-dark" >
         <h2 class="display-4 fw-bold text-center text-light mb-3">Proyectos destacados</h2>
-    
         <div class="row">
             <div class="col-12 col-sm-6 py-2">
-                <div class="card bg-image" style="background-image: url('assets/img/proyecto1.jfif');">
+                <div class="card bg-image">
                     <div class="card-body">
                         <h5 class="card-title fw-bold text-light">Multipurpose Office Simulator</h5>
                         <p class="card-text text-light">
@@ -110,7 +99,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 py-2">
-                <div class="card bg-image" style="background-image: url('assets/img/proyecto2.jfif');">
+                <div class="card bg-image">
                     <div class="card-body">
                         <h5 class="card-title fw-bold text-light">Software de Gestión de Turnos Hospitalarios</h5>
                         <p class="card-text text-light">
@@ -120,42 +109,38 @@
                 </div>
             </div>
         </div>
-    
     </section>
+
     <section id="Contacto" class="container my-5">
-        <h2 class="display-4 fw-bold text-center my-4">Contáctame</h2>
-    
-        <p class="text-center my-4 d-none d-md-block">Si tienes alguna pregunta o deseas más información sobre mis proyectos, no dudes en ponerte en contacto conmigo. Estaré encantada de ayudarte.</p>
-    
-        <form>
-            <div class="form-group mb-4">
-                <label class="mb-2" for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="display-4 fw-bold text-center my-4">Contáctame</h2>
+                <p class="lead text-center mb-5">¿Tienes alguna pregunta o deseas más información sobre mis proyectos? ¡Déjame un mensaje!</p>
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="correo" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe aquí tu mensaje" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-dark btn-lg">Enviar</button>
+                    </div>
+                </form>
             </div>
-    
-            <div class="form-group mb-4">
-                <label class="mb-2" for="correo">Correo electrónico</label>
-                <input type="email" class="form-control" id="correo" placeholder="Correo electrónico" required>
-            </div>
-    
-            <div class="form-group mb-4">
-                <label class="mb-2" for="mensaje">Mensaje</label>
-                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe aquí tu mensaje" required></textarea>
-            </div>
-    
-            <div class="my-3 text-end">
-                <button type="submit" class="btn btn-info text-light">Enviar</button>
-            </div>
-        </form>
+        </div>
     </section>
     
+    
+
     <footer class="bg-dark text-center text-light p-4">
         <p class="mb-0">Marianela Marchetti 2024. Todos los derechos reservados.</p>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
+
