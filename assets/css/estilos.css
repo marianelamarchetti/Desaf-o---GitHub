@@ -13,19 +13,75 @@ body {
 
 /* Mis trabajos */
 
-#Mis-trabajos .image-top {
-  height: 250px;
-  background-repeat: no-repeat;
+.card.bg-image {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  height: 300px; /* Ajusta la altura según sea necesario */
+  display: flex;
+  align-items: flex-end; /* Alinea el contenido al fondo del contenedor */
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+.card-body {
+  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para mejorar la legibilidad del texto */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn-outline-light {
+  border-color: white;
+  color: white;
+}
+
+.btn-outline-light:hover {
+  background-color: white;
+  color: black;
 }
 
 /* Contacto */
-
-#Contacto form label {
-  font-weight: 700;
-  color: #373a3c;
+#Contacto {
+  background-color: #f8f9fa; /* Fondo claro para la sección */
+  padding: 2rem;
+  border-radius: 10px;
 }
+
+#Contacto h2 {
+  color: #17a2b8; /* Color azul del texto */
+}
+
+#Contacto .form-group label {
+  font-weight: bold;
+}
+
+#Contacto .form-control {
+  border-radius: 5px;
+}
+
+#Contacto .btn-info {
+  background-color: #17a2b8;
+  border: none;
+}
+
+#Contacto .btn-info:hover {
+  background-color: #138496;
+}
+footer {
+  background-color: #343a40; /* Fondo oscuro */
+  color: #ffffff; /* Texto claro */
+  padding: 1rem; /* Espaciado interno */
+  text-align: center; /* Alineación del texto al centro */
+  font-size: 0.9rem; /* Tamaño de fuente */
+}
+
+footer p {
+  margin: 0; /* Sin márgenes para el párrafo */
+}
+
 
 @media (max-width: 768px) {
   #Contacto form label {
